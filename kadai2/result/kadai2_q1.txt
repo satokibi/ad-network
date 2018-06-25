@@ -1,0 +1,65 @@
+ - - - - - - - - - - - - - - - - - 
+start_time = 1
+end_time = 15.15856
+time = 14.15856
+ - - - - - - - - - - - - - - - - - 
+node0.r_tcp40 = 0
+node0.r_ack = 1669
+node0.r_tcp = 0
+node0.d_tcp40 = 0
+node0.d_ack = 0
+node0.d_tcp = 0
+node0.r_packet = 0
+node0.d_packet = 0
+ - - - - - - - - - - - - - - - - - 
+link_a.tcp40(+) = 1
+link_a.tcp40(-) = 1
+link_a.ack(+) = 1669
+link_a.ack(-) = 1669
+link_a.tcp(+) = 1668
+link_a.tcp(-) = 1668
+ - - - - - - - - - - - - - - - - - 
+node1.r_tcp40 = 1
+node1.r_ack = 1669
+node1.r_tcp = 1668
+node1.d_tcp40 = 0
+node1.d_ack = 0
+node1.d_tcp = 0
+node1.r_packet = 1734720
+node1.d_packet = 0
+ - - - - - - - - - - - - - - - - - 
+link_b.tcp40(+) = 1
+link_b.tcp40(-) = 1
+link_b.ack(+) = 1669
+link_b.ack(-) = 1669
+link_b.tcp(+) = 1668
+link_b.tcp(-) = 1668
+ - - - - - - - - - - - - - - - - - 
+node2.r_tcp40 = 1
+node2.r_ack = 1669
+node2.r_tcp = 1668
+node2.d_tcp40 = 0
+node2.d_ack = 0
+node2.d_tcp = 0
+node2.r_packet = 1734720
+node2.d_packet = 0
+ - - - - - - - - - - - - - - - - - 
+link_c.tcp40(+) = 1
+link_c.tcp40(-) = 1
+link_c.ack(+) = 1669
+link_c.ack(-) = 1669
+link_c.tcp(+) = 1668
+link_c.tcp(-) = 1668
+ - - - - - - - - - - - - - - - - - 
+node3.r_tcp40 = 1
+node3.r_ack = 0
+node3.r_tcp = 1668
+node3.d_tcp40 = 0
+node3.d_ack = 0
+node3.d_tcp = 0
+node3.r_packet = 1734720
+node3.d_packet = 0
+ - - - - - - - - - - - - - - - - - 
+node3.get_packet(bit) = 13877760
+through put = 980167.474658
+ - - - - - - - - - - - - - - - - - 
