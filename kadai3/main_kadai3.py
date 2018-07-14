@@ -2,7 +2,11 @@
 #!/usr/bin/python
 # -*- Coding: utf-8 -*-
 
+<<<<<<< HEAD
 from models2 import Queue, Node
+=======
+from lib2 import Queue, Node
+>>>>>>> origin/master
 
 def enqueue(queue):
 	if log[5] != '40':

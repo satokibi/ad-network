@@ -18,7 +18,7 @@ class Queue():
 		self.tcp_de += 1
 
 	def enqueue_tcp40(self):
-		self.tcp40_en += 1 
+		self.tcp40_en += 1
 
 	def dequeue_tcp40(self):
 		self.tcp40_de += 1
@@ -49,7 +49,7 @@ class Node():
 		self.d_ack = 0
 		self.receive_packet = 0
 		self.drop_packet = 0
-	
+
 	def receive_tcp(self, packet):
 		self.r_tcp += 1
 		self.receive_packet += packet
@@ -59,7 +59,7 @@ class Node():
 
 	def receive_ack(self):
 		self.r_ack += 1
-	
+
 	def drop_tcp(self, packet):
 		self.d_tcp += 1
 		self.drop_packet += packet
@@ -72,7 +72,7 @@ class Node():
 
 	def get_packet(self):
 		return self.receive_packet
-	
+
 	def print_result(self):
 		print(self.name + '.r_tcp40 = ' + str(self.r_tcp40))
 		print(self.name + '.r_ack = ' + str(self.r_ack))
