@@ -1,0 +1,21 @@
+ - - - - - - - - - - - - - - - - - 
+start_time = 1
+end_time = 15.416
+time = 14.416
+ - - - - - - - - - - - - - - - - - 
+queue01.enqueue = 2800
+queue01.dequeue = 2800
+node1.receive = 2800
+node1.drop = 1001
+node1.receive_packet(byte) = 1400000
+node1.drop_packet(byte) = 500500
+ - - - - - - - - - - - - - - - - - 
+queue12.enqueue = 2800
+queue12.dequeue = 1799
+node2.receive = 1799
+node2.drop = 0
+node2.receive_packet(byte) = 899500
+node2.drop_packet(byte) = 0
+get_packet(bit) = 7196000
+through put = 499167.591565
+ - - - - - - - - - - - - - - - - - 
