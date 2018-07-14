@@ -18,7 +18,6 @@ class Queue():
 		print(self.name + '.dequeue = ' + str(self.de))
 
 
-
 class Node():
 	def __init__(self, name):
 		self.name = name
@@ -37,9 +36,9 @@ class Node():
 
 	def get_packet(self):
 		return self.receive_packet
-	
+
 	def print_result(self):
 		print(self.name + '.receive = ' + str(self.receive))
 		print(self.name + '.drop = ' + str(self.drop))
-		print(self.name + '.receive_packet(byte) = ' + str(self.receive_packet)) 
-		print(self.name + '.drop_packet(byte) = ' + str(self.drop_packet)) 
+		print(self.name + '.receive_packet(byte) = ' + str(self.receive_packet))
+		print(self.name + '.drop_packet(byte) = ' + str(self.drop_packet))
