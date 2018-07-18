@@ -1,8 +1,8 @@
-
 #!/usr/bin/python
 # -*- Coding: utf-8 -*-
 
 from models3 import Queue, Node
+import matplotlib.pyplot as plt
 
 def enqueue(queue):
 	if log[5] != '40':
@@ -49,9 +49,19 @@ if __name__=='__main__':
 
 	line = raw_input()
 	start_time = line.split()[1]
+
+	# for graph
+	x_time = []
+	y_drop = []
+	y_dropnum = 0
+
 	while line:
 		log = line.split()
 		end_time = log[1]
+
+		x_time.append(log[1])
+		y_drop.append(y_dropnum)
+
 		if log[0] == '+':
 			if int(log[2]) + int(log[3]) == 1:
 				enqueue(link_a)
@@ -79,6 +89,7 @@ if __name__=='__main__':
 				receive(node3)
 
 		if log[0] == 'd':
+			y_dropnum += 1
 			if log[2] == '0':
 				drop(node0)
 			elif log[2] == '1':
@@ -117,3 +128,13 @@ if __name__=='__main__':
 	print('through put = '+ str(round(through_put/1000, 1)) + 'kbps')
 	print('through put = '+ str(round(through_put/1000000, 3))  + 'Mbps')
 	print(' - - - - - - - - - - - - - - - - - ')
+
+
+	plt.plot(x_time, y_drop, label='total drop packets num')
+	plt.axis(ymin=0,ymax=y_dropnum+5)
+	plt.xlabel('time (sec)')
+	plt.ylabel('total drop packets')
+	plt.legend(loc='best')
+
+	plt.savefig('d_packet.png')
+	#plt.show()
