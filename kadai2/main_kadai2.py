@@ -54,7 +54,6 @@ if __name__=='__main__':
 		end_time = log[1]
 		if log[0] == '+':
 			if int(log[2]) + int(log[3]) == 1:
-<<<<<<< HEAD
 				enqueue(link_a)
 			elif int(log[2]) +  int(log[3]) == 3:
 				enqueue(link_b)
@@ -68,21 +67,6 @@ if __name__=='__main__':
 				dequeue(link_b)
 			elif int(log[2]) +  int(log[3]) == 5:
 				dequeue(link_c)
-=======
-				enqueue(link_a)
-			elif int(log[2]) +  int(log[3]) == 3:
-				enqueue(link_b)
-			elif int(log[2]) +  int(log[3]) == 5:
-				enqueue(link_c)
-
-		if log[0] == '-':
-			if int(log[2]) + int(log[3]) == 1:
-				dequeue(link_a)
-			elif int(log[2]) +  int(log[3]) == 3:
-				dequeue(link_b)
-			elif int(log[2]) +  int(log[3]) == 5:
-				dequeue(link_c)
->>>>>>> origin/master
 
 		if log[0] == 'r':
 			if log[3] == '0':

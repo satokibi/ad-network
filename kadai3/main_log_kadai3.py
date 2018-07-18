@@ -2,11 +2,7 @@
 #!/usr/bin/python
 # -*- Coding: utf-8 -*-
 
-<<<<<<< HEAD
-from models2 import Queue, Node
-=======
-from lib2 import Queue, Node
->>>>>>> origin/master
+from models3 import Queue, Node
 
 def enqueue(queue):
 	if log[5] != '40':
@@ -58,7 +54,6 @@ if __name__=='__main__':
 		end_time = log[1]
 		if log[0] == '+':
 			if int(log[2]) + int(log[3]) == 1:
-<<<<<<< HEAD
 				enqueue(link_a)
 			elif int(log[2]) +  int(log[3]) == 3:
 				enqueue(link_b)
@@ -72,21 +67,6 @@ if __name__=='__main__':
 				dequeue(link_b)
 			elif int(log[2]) +  int(log[3]) == 5:
 				dequeue(link_c)
-=======
-				enqueue(link_a)
-			elif int(log[2]) +  int(log[3]) == 3:
-				enqueue(link_b)
-			elif int(log[2]) +  int(log[3]) == 5:
-				enqueue(link_c)
-
-		if log[0] == '-':
-			if int(log[2]) + int(log[3]) == 1:
-				dequeue(link_a)
-			elif int(log[2]) +  int(log[3]) == 3:
-				dequeue(link_b)
-			elif int(log[2]) +  int(log[3]) == 5:
-				dequeue(link_c)
->>>>>>> origin/master
 
 		if log[0] == 'r':
 			if log[3] == '0':
@@ -133,5 +113,7 @@ if __name__=='__main__':
 	node3.print_result()
 	print(' - - - - - - - - - - - - - - - - - ')
 	print(node3.name + '.get_packet(bit) = ' + str(node3.get_packet() * 8))
-	print('through put = '+ str(through_put))
+	print('through put = '+ str(through_put) + 'bps')
+	print('through put = '+ str(round(through_put/1000, 1)) + 'kbps')
+	print('through put = '+ str(round(through_put/1000000, 3))  + 'Mbps')
 	print(' - - - - - - - - - - - - - - - - - ')

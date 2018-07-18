@@ -83,4 +83,39 @@ class Node():
 		print(self.name + '.r_packet = ' + str(self.receive_packet))
 		print(self.name + '.d_packet = ' + str(self.drop_packet))
 
+class Log():
+	def __init__(self, time, saddr, sport, daddr, dport, maxseq, hiack, seqno, cwnd, ssthresh, dupacks, rtt, srtt, rttvar, bkoff):
+		self.time = time
+		self.saddr = saddr
+		self.sport = sport
+		self.daddr = daddr
+		self.dport = dport
+		self.maxseq = maxseq
+		self.hiack = hiack
+		self.seqno = seqno
+		self.cwnd = cwnd
+		self.ssthresh = ssthresh
+		self.dupacks = dupacks
+		self.rtt = rtt
+		self.srtt = srtt
+		self.rttvar = rttvar
+		self.bkoff = bkoff
+
+	def print_me(self):
+		print('time: ' + self.time)
+		print('saddr: ' + self.saddr)
+		print('sport: ' + self.sport)
+		print('daddr: ' + self.daddr)
+		print('dport: ' + self.dport)
+		print('maxseq: ' + self.maxseq)
+		print('hiack: ' + self.hiack)
+		print('seqno: ' + self.seqno)
+		print('cwnd: ' + self.cwnd)
+		print('ssthresh: ' + self.ssthresh)
+		print('dupacks: ' + self.dupacks)
+		print('rtt: ' + self.rtt)
+		print('srtt: ' + self.srtt)
+		print('rttvar: ' + self.rttvar)
+		print('bkoff: ' + self.bkoff)
+
 
