@@ -10,12 +10,6 @@ def event_check_for_queue(queue, log):
 	elif log.event == '-':
 			dequeue(queue, log)
 
-def event_check_for_node(node, log):
-	if log.event == 'r':
-			receve(node, log)
-	elif log.event == 'd':
-			drop(node, log)
-
 def enqueue(queue, log):
 	if log.pck_type == 'tcp' and log.pck_size == 1040:
 		queue.enqueue_tcp()
@@ -79,7 +73,6 @@ if __name__=='__main__':
 
 	jitter = 0
 
-	drop_packet = 0
 	time_list = []
 	through_put_list = []
 	drop_num_list = []
@@ -101,7 +94,6 @@ if __name__=='__main__':
 			through_put_list.append(round((node4.get_tcp_packet() * 8) / (float(end_time) - float(start_time))/1000, 1))
 		else:
 			through_put_list.append(0)
-		# drop_num_list.append(drop_packet)
 		drop_num_list.append(drop04packet)
 
 		if int(log.link_src) + int(log.link_dst) == 2:
@@ -117,7 +109,11 @@ if __name__=='__main__':
 
 
 		if log.event == 'r':
-			if log.link_dst == '2':
+			if log.link_dst == '0':
+				receive(node0, log)
+			elif log.link_dst == '1':
+				receive(node1, log)
+			elif log.link_dst == '2':
 				receive(node2, log)
 			elif log.link_dst == '3':
 				receive(node3, log)
@@ -134,11 +130,9 @@ if __name__=='__main__':
 						jitter_list.append(jitter * 1000)
 				receive(node4, log)
 			elif log.link_dst == '5':
-				node5.receive_tcp(log.pck_size)
+				receive(node5, log)
 
 		if log.event == 'd':
-			drop_packet += 1
-			#if log.src_port == '0.0' and log.dst_port == '4.0':
 			if log.dst_port == '4.0':
 				drop04packet += 1
 
@@ -181,6 +175,25 @@ if __name__=='__main__':
 	print('through put = '+ str(round(through_put/1000, 1)) + 'kbps')
 	print('through put = '+ str(round(through_put/1000000, 3))  + 'Mbps')
 	print(' - - - - - - - - - - - - - - - - - ')
+	print(' - - - - - - - - - - - - - - - - - ')
+	print(' - - - - - - - - - - - - - - - - - ')
+	print(' - - - - - - - - - - - - - - - - - ')
+	node0.print_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	queue02.print_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	node2.print_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	queue23.print_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	node3.print_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	queue34.print_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	node4.print_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	
+	
 
 	fig = plt.figure(figsize=(12, 8))
 	axL = fig.add_subplot(1,2,1)
@@ -189,7 +202,7 @@ if __name__=='__main__':
 	axL.plot(time_list, through_put_list, label='throughput', color='blue')
 	axL2 = axL.twinx()
 	axL2.plot(time_list, drop_num_list, label='total drop pck', color='red')
-	axL2.axis(ymin=0,ymax=drop_packet + 5)
+	axL2.axis(ymin=0,ymax=drop04packet + 5)
 
 	axL.legend(bbox_to_anchor=(1, 0.2))
 	axL2.legend(bbox_to_anchor=(1, 0.1))
