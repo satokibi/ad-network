@@ -139,6 +139,12 @@ if __name__=='__main__':
 	print('get_packet(bit)  = ' + str(node4.get_packet() * 8) + ' bit')
 	print('get_packet(byte) = ' + str(node4.get_packet()) + ' byte')
 	print(' - - - - - - - - - - - - - - - - - ')
+
+	print('through_put = node4.get_packet (byte) * 8 / (end_time - start_time)')
+	print('through_put = ' + str(node4.get_packet()) + ' * 8 / (' + str(end_time) + ' - ' + str(start_time) + ')')
+	print('through_put = ' + str(node4.get_packet() * 8) + ' / ' + str(float(end_time) - float(start_time)))
+
+
 	print('through put = '+ str(through_put))
 	print('through put = '+ str(round(through_put/1000, 1)) + 'kbps')
 	print('through put = '+ str(round(through_put/1000000, 3))  + 'Mbps')
