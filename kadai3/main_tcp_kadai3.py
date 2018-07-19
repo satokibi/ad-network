@@ -40,4 +40,4 @@ if __name__=='__main__':
 	ax1.legend(bbox_to_anchor=(0,1),loc='upper left')
 	ax2.legend(bbox_to_anchor=(0,0.85),loc='upper left')
 	plt.savefig('tcp.png')
-	plt.show()
+	# plt.show()

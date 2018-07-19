@@ -61,6 +61,9 @@ node3.r_packet = 72800
 node3.d_packet = 0
  - - - - - - - - - - - - - - - - - 
 node3.get_packet(bit) = 582400
+through_put = node3.get_packet (byte) * 8 / (end_time - start_time)
+through_put = 72800 * 8 / (15.311552 - 1)
+through_put = 582400 / 14.311552
 through put = 40694.3984831bps
 through put = 40.7kbps
 through put = 0.041Mbps
