@@ -26,10 +26,6 @@ if __name__=='__main__':
 
 	jitter = 0
 
-<<<<<<< HEAD
-=======
-	drop_packet = 0
->>>>>>> origin/master
 	time_list = []
 	through_put_list = []
 	drop_num_list = []
@@ -51,13 +47,8 @@ if __name__=='__main__':
 			through_put_list.append(round((node4.get_packet() * 8) / (float(end_time) - float(start_time))/1000, 1))
 		else:
 			through_put_list.append(0)
-<<<<<<< HEAD
+
 		drop_num_list.append(drop04packet)
-=======
-		drop_num_list.append(drop_packet)
->>>>>>> origin/master
-
-
 		if log.event == '+':
 			if log.link_src == '0' and log.link_dst == '2':
 				queue02.enqueue()
@@ -107,12 +98,7 @@ if __name__=='__main__':
 				node5.receive_p(log.pck_size)
 
 		if log.event == 'd':
-<<<<<<< HEAD
 			if log.dst_port == '4.0':
-=======
-			drop_packet += 1
-			if log.src_port == '0.0' and log.dst_port == '4.0':
->>>>>>> origin/master
 				drop04packet += 1
 
 			if log.link_src == '0' and log.link_dst == '2':
@@ -152,30 +138,22 @@ if __name__=='__main__':
 	print('get_packet(bit)  = ' + str(node4.get_packet() * 8) + ' bit')
 	print('get_packet(byte) = ' + str(node4.get_packet()) + ' byte')
 	print(' - - - - - - - - - - - - - - - - - ')
-<<<<<<< HEAD
 
 	print('through_put = node4.get_packet (byte) * 8 / (end_time - start_time)')
 	print('through_put = ' + str(node4.get_packet()) + ' * 8 / (' + str(end_time) + ' - ' + str(start_time) + ')')
 	print('through_put = ' + str(node4.get_packet() * 8) + ' / ' + str(float(end_time) - float(start_time)))
 
 
-=======
->>>>>>> origin/master
 	print('through put = '+ str(through_put))
 	print('through put = '+ str(round(through_put/1000, 1)) + 'kbps')
 	print('through put = '+ str(round(through_put/1000000, 3))  + 'Mbps')
 	print(' - - - - - - - - - - - - - - - - - ')
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/master
 	fig = plt.figure(figsize=(12, 8))
 	axL = fig.add_subplot(1,2,1)
 	axR = fig.add_subplot(1,2,2)
 
-<<<<<<< HEAD
 	axL.plot(time_list, through_put_list, label='throughput', color='blue')
 	axL2 = axL.twinx()
 	axL2.plot(time_list, drop_num_list, label='total drop pck', color='red')
@@ -188,34 +166,14 @@ if __name__=='__main__':
 	axL2.set_ylabel('num', color='red')
 
 	axR.plot(receive_packet_num, loss_time_ave_list, label='ave loss time')
-=======
-	axL.plot(time_list, through_put_list, label='throughput (kbps) ')
-	axL2 = axL.twinx()
-	axL2.plot(time_list, drop_num_list, label='drop pck total num', color='red')
-	axL2.axis(ymin=0,ymax=drop_packet + 5)
 
-	axL.legend(bbox_to_anchor=(1, 0.1))
-	axL2.legend(bbox_to_anchor=(1, 0.2))
-	axL.set_xlabel('Time (sec)')
-	axL.set_ylabel('kbps')
-	axL2.set_ylabel('drop pck total num')
-
-	axR.plot(receive_packet_num, loss_time_ave_list, label='loss ave time')
->>>>>>> origin/master
 	axR.plot(receive_packet_num, loss_time_list, label='loss time')
 	axR.plot(receive_packet_num, jitter_list, label='jitter')
 	axR.set_xlabel('Time (sec)')
 	axR.set_ylabel('msec')
-<<<<<<< HEAD
 	axR.legend(loc='best')
 
 	plt.subplots_adjust(wspace=0.6)
 	plt.savefig('kadai4.png')
-=======
-	# axR.legend(bbox_to_anchor=(1, 0.2))
-	axR.legend(loc='best')
-
-	plt.subplots_adjust(wspace=0.6)
->>>>>>> origin/master
 	plt.show()
 

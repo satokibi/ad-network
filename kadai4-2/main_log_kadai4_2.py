@@ -197,8 +197,8 @@ if __name__=='__main__':
 	print(' - - - - - - - - - - - - - - - - - ')
 	node4.print_result()
 	print(' - - - - - - - - - - - - - - - - - ')
-	
-	
+
+
 
 	fig = plt.figure(figsize=(12, 8))
 	axL = fig.add_subplot(1,2,1)
