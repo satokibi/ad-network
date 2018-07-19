@@ -61,9 +61,12 @@ node3.r_packet = 1133600
 node3.d_packet = 0
  - - - - - - - - - - - - - - - - - 
 node3.get_packet(bit) = 9068800
+<<<<<<< HEAD
 through_put = node3.get_packet (byte) * 8 / (end_time - start_time)
 through_put = 1133600 * 8 / (15.083744 - 1)
 through_put = 9068800 / 14.083744
+=======
+>>>>>>> origin/master
 through put = 643919.684993bps
 through put = 643.9kbps
 through put = 0.644Mbps

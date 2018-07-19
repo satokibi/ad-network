@@ -124,10 +124,13 @@ if __name__=='__main__':
 	node3.print_result()
 	print(' - - - - - - - - - - - - - - - - - ')
 	print(node3.name + '.get_packet(bit) = ' + str(node3.get_packet() * 8))
+<<<<<<< HEAD
 
 	print('through_put = node3.get_packet (byte) * 8 / (end_time - start_time)')
 	print('through_put = ' + str(node3.get_packet()) + ' * 8 / (' + str(end_time) + ' - ' + str(start_time) + ')')
 	print('through_put = ' + str(node3.get_packet() * 8) + ' / ' + str(float(end_time) - float(start_time)))
+=======
+>>>>>>> origin/master
 	print('through put = '+ str(through_put) + 'bps')
 	print('through put = '+ str(round(through_put/1000, 1)) + 'kbps')
 	print('through put = '+ str(round(through_put/1000000, 3))  + 'Mbps')
@@ -141,4 +144,8 @@ if __name__=='__main__':
 	plt.legend(loc='best')
 
 	plt.savefig('d_packet.png')
+<<<<<<< HEAD
 	# plt.show()
+=======
+	#plt.show()
+>>>>>>> origin/master
