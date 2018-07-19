@@ -1,0 +1,105 @@
+ - - - - - - - - - - - - - - - - - 
+start_time = 1
+end_time = 15.15856
+time = 14.15856
+ - - - - - - - - - - - - - - - - - 
+loss / get (num) = 0 / 1668
+loss / get (%)   = 0.0 %
+ - - - - - - - - - - - - - - - - - 
+total loss time(sec)  = 224.0736
+node4 receive pck num = 1668
+ave loss time(sec)  = 0.134336690647
+ave loss time(msec) = 134.336690647
+ - - - - - - - - - - - - - - - - - 
+jitter(sec)  = 0.13544
+jitter(msec) = 135.44
+ - - - - - - - - - - - - - - - - - 
+get_packet(bit)  = 13877760 bit
+get_packet(byte) = 1734720 byte
+ - - - - - - - - - - - - - - - - - 
+through put = 980167.474658
+through put = 980.2kbps
+through put = 0.98Mbps
+ - - - - - - - - - - - - - - - - - 
+ - - - - - - - - - - - - - - - - - 
+ - - - - - - - - - - - - - - - - - 
+ - - - - - - - - - - - - - - - - - 
+node0.r_tcp40 = 0
+node0.r_ack = 1669
+node0.r_tcp = 0
+node0.d_tcp40 = 0
+node0.d_ack = 0
+node0.d_tcp = 0
+node0.r_tcp_packet (byte) = 0
+node0.d_tcp_packet (byte) = 0
+node0.r_cbr = 0
+node0.d_cbr = 0
+node0.r_udp_packet(byte) = 0
+node0.d_udp_packet(byte) = 0
+ - - - - - - - - - - - - - - - - - 
+queue02.tcp40(+) = 1
+queue02.tcp40(-) = 1
+queue02.ack(+) = 1669
+queue02.ack(-) = 1669
+queue02.tcp(+) = 1668
+queue02.tcp(-) = 1668
+queue02.cbr(+) = 0
+queue02.cbr(-) = 0
+ - - - - - - - - - - - - - - - - - 
+node2.r_tcp40 = 1
+node2.r_ack = 1669
+node2.r_tcp = 1668
+node2.d_tcp40 = 0
+node2.d_ack = 0
+node2.d_tcp = 0
+node2.r_tcp_packet (byte) = 1734720
+node2.d_tcp_packet (byte) = 0
+node2.r_cbr = 0
+node2.d_cbr = 0
+node2.r_udp_packet(byte) = 0
+node2.d_udp_packet(byte) = 0
+ - - - - - - - - - - - - - - - - - 
+queue23.tcp40(+) = 1
+queue23.tcp40(-) = 1
+queue23.ack(+) = 1669
+queue23.ack(-) = 1669
+queue23.tcp(+) = 1668
+queue23.tcp(-) = 1668
+queue23.cbr(+) = 0
+queue23.cbr(-) = 0
+ - - - - - - - - - - - - - - - - - 
+node3.r_tcp40 = 1
+node3.r_ack = 1669
+node3.r_tcp = 1668
+node3.d_tcp40 = 0
+node3.d_ack = 0
+node3.d_tcp = 0
+node3.r_tcp_packet (byte) = 1734720
+node3.d_tcp_packet (byte) = 0
+node3.r_cbr = 0
+node3.d_cbr = 0
+node3.r_udp_packet(byte) = 0
+node3.d_udp_packet(byte) = 0
+ - - - - - - - - - - - - - - - - - 
+queue34.tcp40(+) = 1
+queue34.tcp40(-) = 1
+queue34.ack(+) = 1669
+queue34.ack(-) = 1669
+queue34.tcp(+) = 1668
+queue34.tcp(-) = 1668
+queue34.cbr(+) = 0
+queue34.cbr(-) = 0
+ - - - - - - - - - - - - - - - - - 
+node4.r_tcp40 = 1
+node4.r_ack = 0
+node4.r_tcp = 1668
+node4.d_tcp40 = 0
+node4.d_ack = 0
+node4.d_tcp = 0
+node4.r_tcp_packet (byte) = 1734720
+node4.d_tcp_packet (byte) = 0
+node4.r_cbr = 0
+node4.d_cbr = 0
+node4.r_udp_packet(byte) = 0
+node4.d_udp_packet(byte) = 0
+ - - - - - - - - - - - - - - - - - 
