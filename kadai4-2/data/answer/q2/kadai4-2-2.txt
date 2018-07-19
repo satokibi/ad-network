@@ -17,6 +17,9 @@ jitter(msec) = 135.439999996
 get_packet(bit)  = 9776000 bit
 get_packet(byte) = 1222000 byte
  - - - - - - - - - - - - - - - - - 
+through_put = node4.get_packet (byte) * 8 / (end_time - start_time)
+through_put = 1222000 * 8 / (15.15984 - 1)
+through_put = 9776000 / 14.15984
 through put = 690403.281393
 through put = 690.4kbps
 through put = 0.69Mbps
