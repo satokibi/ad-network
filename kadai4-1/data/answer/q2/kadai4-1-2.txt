@@ -1,0 +1,23 @@
+ - - - - - - - - - - - - - - - - - 
+start_time = 1
+end_time = 15.03379
+time = 14.03379
+ - - - - - - - - - - - - - - - - - 
+loss / get (num) = 320 / 3734
+loss / get (%)   = 8.57 %
+ - - - - - - - - - - - - - - - - - 
+total loss time(sec)  = 249.77024
+node4 receive pck num = 3414
+ave loss time(sec)  = 0.0731605858231
+ave loss time(msec) = 73.1605858231
+ - - - - - - - - - - - - - - - - - 
+jitter(sec)  = 0.03504
+jitter(msec) = 35.04
+ - - - - - - - - - - - - - - - - - 
+get_packet(bit)  = 5735520 bit
+get_packet(byte) = 716940 byte
+ - - - - - - - - - - - - - - - - - 
+through put = 408693.588831
+through put = 408.7kbps
+through put = 0.409Mbps
+ - - - - - - - - - - - - - - - - - 

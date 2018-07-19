@@ -1,0 +1,7 @@
+time: 5.04019  saddr: 0  sport: 0  daddr: 3  dport: 0  maxseq: 0    hiack: 0    seqno: 1    cwnd: 2.000  ssthresh: 2   dupacks: 0  rtt: 0.000  srtt: 0.000  rttvar: 12.000 bkoff: 2
+time: 5.04019  saddr: 0  sport: 0  daddr: 3  dport: 0  maxseq: 0    hiack: 0    seqno: 1    cwnd: 1.000  ssthresh: 2   dupacks: 0  rtt: 0.000  srtt: 0.000  rttvar: 12.000 bkoff: 2
+time: 9.08278  saddr: 0  sport: 0  daddr: 3  dport: 0  maxseq: 2    hiack: 1    seqno: 3    cwnd: 2.000  ssthresh: 2   dupacks: 0  rtt: 4.040  srtt: 4.040  rttvar: 2.020  bkoff: 1
+time: 12.08278 saddr: 0  sport: 0  daddr: 3  dport: 0  maxseq: 3    hiack: 2    seqno: 4    cwnd: 2.500  ssthresh: 2   dupacks: 0  rtt: 4.040  srtt: 4.040  rttvar: 2.020  bkoff: 1
+time: 13.12538 saddr: 0  sport: 0  daddr: 3  dport: 0  maxseq: 4    hiack: 3    seqno: 5    cwnd: 2.900  ssthresh: 2   dupacks: 0  rtt: 4.050  srtt: 4.040  rttvar: 1.518  bkoff: 1
+time: 16.12538 saddr: 0  sport: 0  daddr: 3  dport: 0  maxseq: 5    hiack: 4    seqno: 6    cwnd: 3.245  ssthresh: 2   dupacks: 0  rtt: 4.050  srtt: 4.040  rttvar: 1.518  bkoff: 1
+time: 17.16797 saddr: 0  sport: 0  daddr: 3  dport: 0  maxseq: 5    hiack: 5    seqno: 6    cwnd: 3.553  ssthresh: 2   dupacks: 0  rtt: 4.040  srtt: 4.040  rttvar: 1.140  bkoff: 1
