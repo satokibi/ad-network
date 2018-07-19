@@ -1,3 +1,0 @@
-this is branch test file.
-add this sentence from test1
-add this sentence from test2
