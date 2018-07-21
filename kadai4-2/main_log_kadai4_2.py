@@ -223,6 +223,6 @@ if __name__=='__main__':
 	axR.legend(loc='best')
 
 	plt.subplots_adjust(wspace=0.6)
-	plt.savefig('kadai4.png')
+	# plt.savefig('kadai4.png')
 	plt.show()
 
