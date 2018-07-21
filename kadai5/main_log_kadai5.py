@@ -2,6 +2,7 @@
 # -*- Coding: utf-8 -*-
 
 from models5 import *
+import math
 import matplotlib.pyplot as plt
 
 def event_check_for_queue(queue, log):
@@ -79,6 +80,7 @@ if __name__=='__main__':
 	loss_time_ave_list = []
 	loss_time_list = []
 
+
 	line = raw_input()
 	start_time = line.split()[1]
 
@@ -147,6 +149,23 @@ if __name__=='__main__':
 		except EOFError:
 			break
 
+	variances = []
+
+	ave_loss_time = sum_loss_time / node4.r_cbr
+
+	sum_va = 0
+	for l in loss_time_list:
+		print(sum_va)
+		sum_va += math.sqrt((l-ave_loss_time) * (l-ave_loss_time))
+
+	print(' - - - - - - - - - - - - - - - - - ')
+	print(' - - - - - - - - - - - - - - - - - ')
+	print(sum_va / len(loss_time_list))
+	print(' - - - - - - - - - - - - - - - - - ')
+	print(' - - - - - - - - - - - - - - - - - ')
+
+
+
 
 	through_put = (node4.get_udp_packet() * 8) / (float(end_time) - float(start_time))
 	print(' - - - - - - - - - - - - - - - - - ')
@@ -159,8 +178,8 @@ if __name__=='__main__':
 	print(' - - - - - - - - - - - - - - - - - ')
 	print('total loss time(sec)  = ' + str(sum_loss_time))
 	print('node4 receive pck num = ' + str(node4.r_cbr))
-	print('ave loss time(sec)  = ' + str(sum_loss_time / node4.r_cbr))
-	print('ave loss time(msec) = ' + str((sum_loss_time / node4.r_cbr)*1000))
+	print('ave loss time(sec)  = ' + str(ave_loss_time))
+	print('ave loss time(msec) = ' + str(ave_loss_time * 1000))
 	print(' - - - - - - - - - - - - - - - - - ')
 	print(' - - - - - - - - - - - - - - - - - ')
 	print('get_packet(bit)  = ' + str(node4.get_udp_packet() * 8) + ' bit')
