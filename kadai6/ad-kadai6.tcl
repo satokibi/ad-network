@@ -87,7 +87,6 @@ $ns at $stopmain  "$cbr0 stop"
 set starttm $startmain
 set stoptm $stopmain
 
-#foreach i {2 3 4 5 6} { 
 foreach i {2 3 4 5 6} { 
 
 #Create a TCP agent and attach it to node n1,

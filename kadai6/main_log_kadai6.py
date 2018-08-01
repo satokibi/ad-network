@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- Coding: utf-8 -*-
 
-from models5 import *
+from models6 import *
 import math
 import matplotlib.pyplot as plt
 
@@ -121,12 +121,12 @@ if __name__=='__main__':
 				for l in queue02.logs:
 					if l.pck_id == log.pck_id:
 						loss_time = float(log.time) - float(l.time)
-						loss_time_list.append(loss_time)
+						print(loss_time)
 						sum_loss_time += loss_time
 
 						time_list_for_drop.append(log.time)
-						#loss_time_ave_list.append(sum_loss_time / (node4.r_cbr + 1) * 1000)
-						loss_time_ave_list.append(sum_loss_time / (node4.r_cbr + 1))
+						loss_time_ave_list.append(sum_loss_time / (node4.r_cbr + 1) * 1000)
+						loss_time_list.append(loss_time * 1000)
 				receive(node4, log)
 			elif log.link_dst == '5':
 				receive(node5, log)
@@ -149,46 +149,67 @@ if __name__=='__main__':
 		except EOFError:
 			break
 
-
-
-	print(' - - - - - - - - - - - - - - - - - ')
-	print('start_time = ' + str(start_time))
-	print('end_time = ' + str(end_time))
-	print('time = ' + str(float(end_time) - float(start_time)))
-	print(' - - - - - main flow - - - - - - - ')
-	print('loss / get (num) = ' + str(drop04packet) + ' / ' + str(queue02.cbr_en))
-	print('loss / get (%)   = ' + str(100 * round(float(drop04packet)/float(queue02.cbr_en),5)) + ' %')
-	print(' - - - - - - - - - - - - - - - - - ')
-	print('get_packet(bit)  = ' + str(node4.get_udp_packet() * 8) + ' bit')
-	print('get_packet(byte) = ' + str(node4.get_udp_packet()) + ' byte')
-	print(' - - - - - - - - - - - - - - - - - ')
-
-
+	variances = []
 
 	ave_loss_time = sum_loss_time / node4.r_cbr
 
 	sum_va = 0
 	for l in loss_time_list:
-		sum_va += (l-ave_loss_time) * (l-ave_loss_time)
+		print(sum_va)
+		sum_va += math.sqrt((l-ave_loss_time) * (l-ave_loss_time))
+
+	print(' - - - - - - - - - - - - - - - - - ')
+	print(' - - - - - - - - - - - - - - - - - ')
+	print(sum_va / len(loss_time_list))
+	print(' - - - - - - - - - - - - - - - - - ')
+	print(' - - - - - - - - - - - - - - - - - ')
+
+
+
+
+	through_put = (node4.get_udp_packet() * 8) / (float(end_time) - float(start_time))
+	print(' - - - - - - - - - - - - - - - - - ')
+	print('start_time = ' + str(start_time))
+	print('end_time = ' + str(end_time))
+	print('time = ' + str(float(end_time) - float(start_time)))
+	print(' - - - - - - - - - - - - - - - - - ')
+	print('loss / get (num) = ' + str(drop04packet) + ' / ' + str(queue02.cbr_en))
+	print('loss / get (%)   = ' + str(100 * round(float(drop04packet)/float(queue02.cbr_en),5)) + ' %')
 	print(' - - - - - - - - - - - - - - - - - ')
 	print('total loss time(sec)  = ' + str(sum_loss_time))
 	print('node4 receive pck num = ' + str(node4.r_cbr))
-	print(' - - - - - - - - - - - - - - - - - ')
 	print('ave loss time(sec)  = ' + str(ave_loss_time))
 	print('ave loss time(msec) = ' + str(ave_loss_time * 1000))
 	print(' - - - - - - - - - - - - - - - - - ')
-	print('main flow loss time sum vunsan: ' + str(sum_va))
-	print('vunsan: ' + str(sum_va / len(loss_time_list)))
+	print(' - - - - - - - - - - - - - - - - - ')
+	print('get_packet(bit)  = ' + str(node4.get_udp_packet() * 8) + ' bit')
+	print('get_packet(byte) = ' + str(node4.get_udp_packet()) + ' byte')
 	print(' - - - - - - - - - - - - - - - - - ')
 
+	print('through_put = node4.get_packet (byte) * 8 / (end_time - start_time)')
+	print('through_put = ' + str(node4.get_udp_packet()) + ' * 8 / (' + str(end_time) + ' - ' + str(start_time) + ')')
+	print('through_put = ' + str(node4.get_udp_packet() * 8) + ' / ' + str(float(end_time) - float(start_time)))
 
+	print('through put = '+ str(through_put))
+	print('through put = '+ str(round(through_put/1000, 1)) + 'kbps')
+	print('through put = '+ str(round(through_put/1000000, 3))  + 'Mbps')
 	print(' - - - - - - - - - - - - - - - - - ')
-	print('node0 send num: ' + str(queue02.cbr_en))
-	print('node1 send num: ' + str(queue12.cbr_en))
-	print('node2.d_cbr / node2.r_cbr')
-	print(str(node2.d_cbr) + ' / ' + str(node2.r_cbr))
-	print(str( (float(node2.d_cbr) / float(node2.r_cbr) * 100)) + '%')
 	print(' - - - - - - - - - - - - - - - - - ')
+	print(' - - - - - - - - - - - - - - - - - ')
+	print(' - - - - - - - - - - - - - - - - - ')
+	node0.print_udp_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	queue02.print_udp_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	node2.print_udp_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	queue23.print_udp_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	node3.print_udp_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	queue34.print_udp_result()
+	print(' - - - - - - - - - - - - - - - - - ')
+	node4.print_udp_result()
 	print(' - - - - - - - - - - - - - - - - - ')
 
 
