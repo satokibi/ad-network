@@ -1,0 +1,29 @@
+ - - - - - - - - - - - - - - - - - 
+start_time = 1
+end_time = 25.042
+time = 24.042
+ - - - - - main flow - - - - - - - 
+loss / get (num) = 446 / 4801
+loss / get (%)   = 9.29 %
+ - - - - - - - - - - - - - - - - - 
+get_packet(bit)  = 17420000 bit
+get_packet(byte) = 2177500 byte
+ - - - - - - - - - - - - - - - - - 
+ - - - - - - - - - - - - - - - - - 
+total loss time(sec)  = 1038.38004
+node4 receive pck num = 4355
+ - - - - - - - - - - - - - - - - - 
+ave loss time(sec)  = 0.238433993111
+ave loss time(msec) = 238.433993111
+ - - - - - - - - - - - - - - - - - 
+main flow loss time sum vunsan: 28.2565659709
+vunsan: 0.00648830447092
+ - - - - - - - - - - - - - - - - - 
+ - - - - - - - - - - - - - - - - - 
+node0 send num: 4801
+node1 send num: 0
+node2.d_cbr / node2.r_cbr
+446 / 4801
+9.28973130598%
+ - - - - - - - - - - - - - - - - - 
+ - - - - - - - - - - - - - - - - - 

@@ -33,7 +33,7 @@ if __name__=='__main__':
 
 	flows = []
 
-	for i in range(5):
+	for i in range(int(args[1])):
 		flows.append(Flow(i))
 
 	while line:
@@ -66,8 +66,6 @@ if __name__=='__main__':
 
 
 
-
-
 	for i in range(len(flows)):
 		axs.append(fig.add_subplot((len(flows)+1)/2,2,i+1))
 		axs[i].plot(flows[i].x_time, flows[i].y_cwnd, label='cwnd')
@@ -91,5 +89,5 @@ if __name__=='__main__':
 		#ax2.legend(bbox_to_anchor=(0,0.85),loc='upper left')
 
 
-	## plt.savefig('tcp.png')
+	plt.savefig('kadai6t.png')
 	plt.show()

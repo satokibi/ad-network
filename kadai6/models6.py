@@ -168,7 +168,7 @@ class PacketLog():
 		print('link_dst: ' + self.link_dst)
 		print('pck_type: ' + self.pck_type)
 		print('pck_size: ' + str(self.pck_size))
- 		print('flag: ' + self.flag)
+		print('flag: ' + self.flag)
 		print('flow_id: ' + self.flow_id)
 		print('src_port: ' + self.src_port)
 		print('dst_port: ' + self.dst_port)

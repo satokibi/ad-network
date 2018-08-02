@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- Coding: utf-8 -*-
 
-from models5 import *
+from models6 import *
 import math
 import matplotlib.pyplot as plt
 
@@ -217,6 +217,6 @@ if __name__=='__main__':
 
 	plt.subplots_adjust(wspace=0.6)
 
-	#plt.savefig('kadai5.png')
+        plt.savefig('kadai6.png')
 	plt.show()
 
