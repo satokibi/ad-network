@@ -211,6 +211,3 @@ class TcpLog():
 		print('rttvar: ' + self.rttvar)
 		print('bkoff: ' + self.bkoff)
 
-
-
-
