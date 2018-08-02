@@ -1,3 +1,5 @@
 get_data.sh
 login_ad.sh
 login_linux.sh
+*.pyc
+*.old
